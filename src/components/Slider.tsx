@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-// import { StarIcon } from "./Icons"
+import { useTheme } from "./theme/ThemeProvider"
 
 const slides = [
     { title: "React" },
@@ -23,9 +23,11 @@ const slides = [
 
 const Slider = () => {
     const duplicatedSlides = [...slides, ...slides, ...slides]
-
+    const { theme } = useTheme()
     return (
         <div className="flex items-center relative w-full overflow-hidden blur-[1.5px] min-h-10 dark:text-neutral-400 hover:blur-[0px]">
+            <div className={`absolute z-20 left-0 h-full w-8 bg-gradient-to-r ${theme === 'dark' ? 'from-neutral-950 via-neutral-950 to-transparent' : 'from-neutral-50 via-neutral-50 to-transparent'}`} />
+            <div className={`absolute z-20 right-0 h-full w-8 bg-gradient-to-l ${theme === 'dark' ? 'from-neutral-950 via-neutral-950 to-transparent' : 'from-neutral-50 via-neutral-50 to-transparent'}`} />
             <motion.div
                 className="flex"
                 animate={{

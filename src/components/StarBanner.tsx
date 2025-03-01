@@ -9,11 +9,7 @@ type IconSvgProps = SVGProps<SVGSVGElement> & {
 }
 
 const StarBanner = ({
-	size,
-	width,
-	height,
     color,
-    themeBackgroundColor,
 	...props
 }: IconSvgProps) => {
     const [mounted, setMounted] = useState(false)

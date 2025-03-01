@@ -15,7 +15,7 @@ function App() {
       <div className='overlay absolute inset-0 z-0 w-full h-full' />
       <Slider />
       <Headline />
-      <div className="hidden md:grid grid-cols-12 overflow-y-hidden grow z-10">
+      <div className="hidden md:grid grid-cols-12 grow mb-5 overflow-y-hidden z-10">
         <Infopanel />
         <ProjectViewer />
       </div>
