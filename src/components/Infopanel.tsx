@@ -9,10 +9,21 @@ const Infopanel = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div className='py-5 mx-5 border-t border-neutral-700'>
-            <h2 className={` font-bold mb-4 dark:text-neutral-400`}>EXPERIENCE</h2>
-            <p>Company 1</p>
-            <p>Company 2</p>
-            <p>Company 3</p>
+          <h2 className={`font-bold mb-5 dark:text-neutral-400`}>EXPERIENCE</h2>
+          <div className='flex flex-col gap-4 w-full'>
+              <div className='flex flex-col'>
+                  <div className='font-medium'>Company 1</div>
+                  <div className='dark:text-neutral-400 text-base'>Front End Engineer, 2021-2022</div>
+              </div>
+              <div className='flex flex-col'>
+                  <div className='font-medium'>Company 1</div>
+                  <div className='dark:text-neutral-400'>Front End Engineer, 2021-2022</div>
+              </div>
+              <div className='flex flex-col'>
+                  <div className='font-medium'>Company 1</div>
+                  <div className='dark:text-neutral-400'>Front End Engineer, 2021-2022</div>
+              </div>
+          </div>
         </div>
     </div>
   )
