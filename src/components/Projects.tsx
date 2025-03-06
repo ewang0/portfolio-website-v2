@@ -13,14 +13,8 @@ import Gallery from './Gallery'
 const Projects: React.FC<ProjectsProps> = ( { projectsArr, selected, handleProjectSelect  }) => {
     const { theme } = useTheme()
 
-    const description = (
-        <div className='text-left pb-5 text-base text-pretty'>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </div>
-    )
-
     return (
-        <div className='w-full h-full col-span-4 mt-5 overflow-y-auto z-10 md:border-x border-neutral-700'>
+        <div className='w-full h-full col-span-4 mt-5 overflow-y-auto z-10 md:border-r lg:border-x border-neutral-700'>
             <div className="flex flex-col">
                 <div className={`sticky top-0 px-5 pb-5 z-10 ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
                     <div className='overlay absolute top-0 left-0 w-full h-full' />
@@ -41,9 +35,9 @@ const Projects: React.FC<ProjectsProps> = ( { projectsArr, selected, handleProje
                                     </div>
                                     <div className="border border-neutral-700 px-3 rounded-full">{project.year}</div>
                                 </div>
-                                {index === selected && description}
+                                {index === selected &&  <div className='text-left pb-5 text-base text-pretty'>{projectsArr[selected]?.description}</div>}
                                 <div className='md:hidden'>
-                                    {index === selected && <Gallery selectedImgUrl={project.image.asset.url} skills={project.skills} />}
+                                    <Gallery selectedImgUrl={project.image.asset.url} skills={project.skills} />
                                 </div>
                             </button>
                         )

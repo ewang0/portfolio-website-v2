@@ -16,24 +16,23 @@ const MobileInfopanel = () => {
             <div className='flex gap-8 py-4 mx-5 border-t border-neutral-700'>
                 <h2 className={`font-bold mb-2 dark:text-neutral-400 w-[92px] shrink-0`}>ABOUT</h2>
                 <div className="flex flex-col text-md gap-4">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p className='text-pretty'>Formerly an engineer at Amazon and Lippincott. Currently doing freelance work and building cool things with AI.</p>
                 </div>
             </div>
             <div className='flex gap-8 py-4 mx-5 border-y border-neutral-700'>
                 <h2 className={`font-bold mb-2 dark:text-neutral-400 w-[92px] shrink-0`}>EXPERIENCE</h2>
                 <div className='flex flex-col gap-4 w-full'>
                     <div className='flex flex-col'>
-                        <div className='font-medium'>Company 1</div>
-                        <div className='dark:text-neutral-400'>Front End Engineer, 2021-2022</div>
+                        <div className='font-medium'>Amazon</div>
+                        <div className='dark:text-neutral-400 text-balance'>Front End Engineer, 2022 - 2023</div>
                     </div>
                     <div className='flex flex-col'>
-                        <div className='font-medium'>Company 1</div>
-                        <div className='dark:text-neutral-400'>Front End Engineer, 2021-2022</div>
+                        <div className='font-medium'>Lippincott</div>
+                        <div className='dark:text-neutral-400 text-balance'>Design Technologist, 2023 - 2024</div>
                     </div>
                     <div className='flex flex-col'>
-                        <div className='font-medium'>Company 1</div>
-                        <div className='dark:text-neutral-400'>Front End Engineer, 2021-2022</div>
+                        <div className='font-medium'>Freelance</div>
+                        <div className='dark:text-neutral-400 text-balance'>Full Stack Engineer, 2024 - Present</div>
                     </div>
                 </div>
             </div>
