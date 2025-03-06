@@ -1,6 +1,6 @@
 import { createClient } from "@sanity/client";
 
-const projectsQuery = `*[_type == "project"] {
+const projectsQuery = `*[_type == "project"] | order(_createdAt desc) {
     name,
     description,
     image {
@@ -23,8 +23,8 @@ export const client = createClient({
 })
 
 export async function getProjects() {
-    const posts = await client.fetch(projectsQuery)
-    return posts
+    const projects = await client.fetch(projectsQuery)
+    return projects
 }
 
 export async function getInfopanel() {

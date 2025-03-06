@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-
+import { Badge } from './ui/badge'
 interface GalleryProps {
     selectedImgUrl: string | undefined,
     skills: string[]
@@ -15,7 +15,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedImgUrl, skills }) => {
       </div>
       <div className='flex flex-wrap gap-2 mt-5'>
         {skills?.map((skill) => (
-          <div key={skill} className="border border-neutral-700 px-3 rounded-full">{skill}</div>
+          <Badge key={skill} variant="secondary" className="bg-neutral-200 text-neutral-900 dark:bg-neutral-800 dark:text-white">{skill}</Badge>
         ))}
       </div>
     </div>

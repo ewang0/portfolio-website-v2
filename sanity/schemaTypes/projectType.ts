@@ -8,6 +8,13 @@ export const projectType = defineType({
   icon: SparkleIcon,
   fields: [
     defineField({
+      name: 'listIndex',
+      type: 'number',
+      validation: (rule) => rule
+        .required()
+        .error('List index required')
+    }),
+    defineField({
       name: 'name',
       type: 'string',
       validation: (rule) => rule
