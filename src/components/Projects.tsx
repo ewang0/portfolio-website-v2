@@ -37,7 +37,7 @@ const Projects: React.FC<ProjectsProps> = ( { projectsArr, selected, handleProje
                                 </div>
                                 {index === selected &&  <div className='text-left pb-5 text-base text-pretty'>{projectsArr[selected]?.description}</div>}
                                 <div className='md:hidden'>
-                                    <Gallery selectedImgUrl={project.image.asset.url} skills={project.skills} />
+                                    <Gallery selectedImgUrl={project.image.asset.url} skills={project.skills} link={project.link} />
                                 </div>
                             </button>
                         )
