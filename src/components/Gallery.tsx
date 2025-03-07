@@ -13,7 +13,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedImgUrl, skills, link }) => {
       <a className='cursor-pointer' href={link} target="_blank" rel="noopener noreferrer">
         <div className='relative'>
           <div className='overlay absolute inset-0 z-0' />
-            <img src={selectedImgUrl} className='w-full' alt='' draggable={false} />
+            <img src={selectedImgUrl} className='w-full rounded-xs' alt='' draggable={false} />
         </div>
       </a>
       <div className='flex flex-wrap gap-2 mt-5'>
