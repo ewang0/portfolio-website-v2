@@ -14,7 +14,7 @@ const Footer = () => {
           <div className='flex items-center gap-4'>
             <ExternalLink href="https://github.com/ewang0" text="Github" />
             <ExternalLink href="https://www.linkedin.com/in/ericwang20/" text="LinkedIn" />
-            <ExternalLink href="https://github.com/ewang0" text="CV" />
+            <ExternalLink href="/wang-resume-2025.pdf" text="Resume" />
             <div className='ml-4'>
               <ModeToggle />
             </div>

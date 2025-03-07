@@ -33,7 +33,7 @@ const ProjectViewer = () => {
                     <ExternalLink href={projectsArr[selected]?.link} text="Deployed Project" />
                 </div>
                 <div className='hidden md:block pb-5 px-5'>
-                    <Gallery selectedImgUrl={projectsArr[selected]?.image.asset.url} skills={projectsArr[selected]?.skills} />
+                    <Gallery selectedImgUrl={projectsArr[selected]?.image.asset.url} skills={projectsArr[selected]?.skills} link={projectsArr[selected]?.link} />
                 </div>
             </div>
         </>
