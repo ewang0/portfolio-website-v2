@@ -19,7 +19,10 @@ const MobileCloudWindow = () => {
 
   return (
     <div className="relative flex justify-center">
-        <div className="w-full h-full absolute z-10 md:w-auto md:h-auto">
+        <div className="w-full h-full absolute z-10 md:w-auto md:h-auto" style={{ 
+          transform: 'scale(1.02)', // scale up to prevent edge gaps
+          transformOrigin: 'center'
+        }}>
             <CloudWindow color={theme === 'dark' ? '#090909' : 'white'} className="h-full w-full"/>
         </div>
         <ParallaxBanner

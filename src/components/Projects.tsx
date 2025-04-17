@@ -16,10 +16,10 @@ const Projects: React.FC<ProjectsProps> = ({ projectsArr, selected, handleProjec
     const { theme } = useTheme()
 
     return (
-        <div className='w-full md:w-[40%] mt-5 h-full z-10 md:border-r lg:border-x border-neutral-700 relative'>
+        <div className='w-full md:w-[40%] h-full z-10 md:border-r lg:border-x border-neutral-700 relative'>
             <ScrollArea className="h-full">
                 <div className="flex flex-col">
-                    <div className={`sticky top-0 px-5 pb-5 z-10 ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
+                    <div className={`sticky top-0 px-5 py-5 ${theme === 'dark' ? 'bg-neutral-950' : 'bg-white'}`}>
                         <div className='overlay absolute top-0 left-0 w-full h-full' />
                         <h2 className={`font-bold dark:text-neutral-400`}>PROJECTS</h2>
                     </div>
@@ -48,6 +48,11 @@ const Projects: React.FC<ProjectsProps> = ({ projectsArr, selected, handleProjec
                     </div>
                 </div>
             </ScrollArea>
+            <div className={`absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-20 ${
+                theme === 'dark' 
+                ? 'bg-gradient-to-t from-neutral-950 to-transparent' 
+                : 'bg-gradient-to-t from-neutral-50 to-transparent'
+            }`} />
         </div>
     )
 }

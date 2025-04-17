@@ -45,7 +45,7 @@ const MobileInfopanel = () => {
           <div className="flex flex-col">
             <div className="font-medium">Lippincott</div>
             <div className="dark:text-neutral-400 text-balance">
-              Design Technologist, 2023 - 2024
+              Front End Engineer, 2023 - 2024
             </div>
           </div>
           <div className="flex flex-col">
