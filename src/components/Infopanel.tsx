@@ -2,7 +2,7 @@ import MobileCloudWindow from "./MobileCloudWindow";
 
 const Infopanel = () => {
   return (
-    <div className="hidden lg:flex flex-col relative col-span-2 overflow-y-auto text-pretty">
+    <div className="hidden lg:flex flex-col relative w-[20vw] overflow-y-auto text-pretty">
       <MobileCloudWindow />
       <div className="flex flex-col gap-4 px-5 py-5 border-neutral-700">
         <h2 className={`font-bold dark:text-neutral-400`}>ABOUT</h2>
