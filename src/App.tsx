@@ -1,25 +1,24 @@
-import './App.css'
-import Infopanel from './components/Infopanel'
-import Headline from './components/Headline'
-import ProjectViewer from './components/ProjectViewer'
-import Slider from './components/Slider'
-import Footer from './components/Footer'
-import MobileCloudWindow from './components/MobileCloudWindow'
-import MobileInfoPanel from './components/MobileInfopanel'
-import MobileNav from './components/MobileNav'
+import "./App.css";
+import Infopanel from "./components/Infopanel";
+import Headline from "./components/Headline";
+import ProjectViewer from "./components/ProjectViewer";
+import Slider from "./components/Slider";
+import Footer from "./components/Footer";
+import MobileCloudWindow from "./components/MobileCloudWindow";
+import MobileInfoPanel from "./components/MobileInfopanel";
+import MobileNav from "./components/MobileNav";
 
 function App() {
-
   return (
-    <main className='h-full md:h-screen flex flex-col relative'>
-      <div className='overlay absolute inset-0 z-0 w-full h-full' />
+    <main className="h-full md:h-screen flex flex-col relative">
+      <div className="overlay absolute inset-0 z-0 w-full h-full" />
       <Slider />
       <Headline />
       <div className="hidden md:flex grow mb-5 overflow-y-hidden z-10">
         <Infopanel />
         <ProjectViewer />
       </div>
-      <div className='flex flex-col md:hidden'>
+      <div className="flex flex-col overflow-x-clip md:hidden">
         <MobileNav />
         <MobileCloudWindow />
         <ProjectViewer />
@@ -27,7 +26,7 @@ function App() {
       </div>
       <Footer />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
