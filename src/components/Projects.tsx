@@ -5,6 +5,7 @@ import { useTheme } from "../components/theme/ThemeProvider";
 import StarIcon from "./icons/StarIcon";
 import Gallery from "./Gallery";
 import { ScrollArea } from "./ui/scroll-area";
+import { motion, AnimatePresence } from "framer-motion";
 
 interface ProjectsProps {
   projectsArr: Project[];
@@ -24,7 +25,7 @@ const Projects: React.FC<ProjectsProps> = ({
       <ScrollArea className="h-full">
         <div className="flex flex-col">
           <div
-            className={`sticky top-0 px-5 py-5 ${
+            className={`sticky top-0 px-5 py-5 z-10 ${
               theme === "dark" ? "bg-neutral-950" : "bg-white"
             }`}
           >
@@ -42,25 +43,81 @@ const Projects: React.FC<ProjectsProps> = ({
                   onClick={() => handleProjectSelect(index)}
                 >
                   <div className="w-full flex gap-4 justify-between items-center">
-                    <div className="flex gap-4 items-center">
-                      {index === selected && <StarIcon />}
-                      <div
-                        className={`${
-                          index === selected && "underline"
-                        } py-6 text-2xl font-bold text-left`}
-                      >
+                    <motion.div
+                      className="flex items-center"
+                      layout
+                      transition={{
+                        duration: 0.3,
+                        type: "spring",
+                        stiffness: 800,
+                        damping: 60,
+                      }}
+                    >
+                      <AnimatePresence mode="popLayout">
+                        {index === selected && (
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0 }}
+                            transition={{
+                              duration: 0.3,
+                              scale: {
+                                type: "spring",
+                                stiffness: 500,
+                                damping: 25,
+                              },
+                              exit: { duration: 0.2 },
+                            }}
+                            className="mr-4 hidden md:block"
+                            key="star-icon"
+                          >
+                            <StarIcon />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      <div className="py-6 text-2xl font-bold text-left">
                         {project.name}
                       </div>
-                    </div>
+                    </motion.div>
                     <div className="border border-neutral-700 px-3 rounded-full">
                       {project.year}
                     </div>
                   </div>
-                  {index === selected && (
-                    <div className="text-left pb-5 text-base text-pretty">
-                      {projectsArr[selected]?.description}
-                    </div>
-                  )}
+
+                  {/* Desktop description - only shows when selected */}
+                  <AnimatePresence>
+                    {index === selected && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{
+                          duration: 0.3,
+                          ease: "easeInOut",
+                          exit: { duration: 0.2 },
+                        }}
+                        className="overflow-hidden hidden md:block"
+                      >
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{
+                            duration: 0.3,
+                            delay: 0.1,
+                            exit: { duration: 0.2, delay: 0 },
+                          }}
+                          className="text-left pb-5 text-base text-pretty"
+                        >
+                          {project.description}
+                        </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  {/* Mobile description */}
+                  <div className="md:hidden text-left pb-5 text-base text-pretty">
+                    {project.description}
+                  </div>
                   <div className="md:hidden">
                     <Gallery
                       selectedImgUrl={project.image.asset.url}
