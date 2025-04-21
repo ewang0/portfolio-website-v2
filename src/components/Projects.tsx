@@ -53,28 +53,11 @@ const Projects: React.FC<ProjectsProps> = ({
                         damping: 60,
                       }}
                     >
-                      <AnimatePresence mode="popLayout">
-                        {index === selected && (
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0 }}
-                            transition={{
-                              duration: 0.3,
-                              scale: {
-                                type: "spring",
-                                stiffness: 500,
-                                damping: 25,
-                              },
-                              exit: { duration: 0.2 },
-                            }}
-                            className="mr-4 hidden md:block"
-                            key="star-icon"
-                          >
-                            <StarIcon />
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      {index === selected && (
+                        <div className="mr-4 hidden md:block">
+                          <StarIcon />
+                        </div>
+                      )}
                       <div className="py-6 text-2xl font-bold text-left">
                         {project.name}
                       </div>
