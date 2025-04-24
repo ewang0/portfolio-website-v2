@@ -1,7 +1,9 @@
 "use client";
+
 import React from "react";
 import "../App.css";
 import { Badge } from "./ui/badge";
+import { motion } from "framer-motion";
 
 interface GalleryProps {
   selectedImgUrl: string | undefined;
@@ -19,12 +21,15 @@ const Gallery: React.FC<GalleryProps> = ({ selectedImgUrl, skills, link }) => {
         rel="noopener noreferrer"
       >
         <div className="relative">
-          <div className="overlay absolute inset-0 z-0" />
-          <img
+          <div className="overlay absolute inset-0 z-10" />
+          <motion.img
             src={selectedImgUrl || ""}
             className="w-full rounded-xs"
             alt=""
             draggable={false}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.3, delay: 0.2, ease: "easeInOut" }}
           />
         </div>
       </a>

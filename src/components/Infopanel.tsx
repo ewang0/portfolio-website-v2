@@ -1,6 +1,8 @@
 import MobileCloudWindow from "./MobileCloudWindow";
 import { ScrollArea } from "./ui/scroll-area";
 import { useTheme } from "./theme/ThemeProvider";
+import { ChevronDown } from "lucide-react";
+import { Tooltip } from "./ui/tooltip";
 
 const Infopanel = () => {
   const { theme } = useTheme();
@@ -40,11 +42,22 @@ const Infopanel = () => {
           </div>
         </div>
       </ScrollArea>
-      <div className={`absolute bottom-0 left-0 right-0 h-12 pointer-events-none z-20 ${
-        theme === 'dark' 
-        ? 'bg-gradient-to-t from-neutral-950 to-transparent' 
-        : 'bg-gradient-to-t from-neutral-50 to-transparent'
-      }`} />
+      <div
+        className={`absolute bottom-0 left-0 right-0 h-12 pointer-events-none z-20 ${
+          theme === "dark"
+            ? "bg-gradient-to-t from-neutral-950 to-transparent"
+            : "bg-gradient-to-t from-neutral-50 to-transparent"
+        }`}
+      />
+
+      <div className="absolute bottom-1 right-4 z-30 text-neutral-500 animate-bounce">
+        <Tooltip content="Scroll">
+          <ChevronDown
+            size={24}
+            className="transition-colors duration-200 hover:text-neutral-800 dark:hover:text-neutral-300"
+          />
+        </Tooltip>
+      </div>
     </div>
   );
 };
