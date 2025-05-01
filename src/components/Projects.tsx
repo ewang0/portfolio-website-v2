@@ -37,7 +37,7 @@ const Projects: React.FC<ProjectsProps> = ({
               return (
                 <button
                   key={project.name}
-                  className={`w-full border-b ${
+                  className={`group w-full border-b ${
                     index === 0 ? "border-t" : ""
                   } border-neutral-700 text-lg flex flex-col cursor-pointer`}
                   onClick={() => handleProjectSelect(index)}
@@ -58,7 +58,19 @@ const Projects: React.FC<ProjectsProps> = ({
                           <StarIcon />
                         </div>
                       )}
-                      <div className="py-6 text-2xl font-bold text-left">
+                      <div
+                        className={`py-6 text-2xl font-bold text-left transition-all duration-150 ease-in-out \
+                        dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.6),_0_0_15px_rgba(255,255,255,0.4),_0_0_25px_rgba(255,255,255,0.1)] \
+                        group-hover:[text-shadow:0_0_5px_rgba(0,0,0,0.3),_0_0_15px_rgba(0,0,0,0.2),_0_0_25px_rgba(0,0,0,0.1)] \
+                        ${
+                          index === selected
+                            ? theme === "dark"
+                              ? "[text-shadow:0_0_5px_rgba(255,255,255,0.6),_0_0_15px_rgba(255,255,255,0.4),_0_0_25px_rgba(255,255,255,0.1)]"
+                              : "[text-shadow:0_0_5px_rgba(0,0,0,0.3),_0_0_15px_rgba(0,0,0,0.2),_0_0_25px_rgba(0,0,0,0.1)]"
+                            : ""
+                        }
+                      `}
+                      >
                         {project.name}
                       </div>
                     </motion.div>
