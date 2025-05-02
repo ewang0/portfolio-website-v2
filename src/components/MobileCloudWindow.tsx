@@ -28,7 +28,7 @@ const MobileCloudWindow = () => {
   return (
     <div className="relative flex justify-center">
       <div
-        className="w-full h-full absolute z-10 md:w-auto md:h-auto"
+        className="w-full h-full absolute z-10"
         style={{
           transform: "scale(1.01)", // scale up to prevent edge gaps
           transformOrigin: "center",
