@@ -3,13 +3,11 @@ import { SVGProps } from "react";
 const StarIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
-      className="blur-[1px]"
+      className="blur-[1px] h-full w-full"
       aria-hidden="true"
       focusable="false"
-      height="24"
       role="presentation"
       viewBox="0 0 21 24"
-      width="21"
       {...props}
     >
       <g fill="currentColor" stroke="currentColor">
