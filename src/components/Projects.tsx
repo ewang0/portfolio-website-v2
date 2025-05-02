@@ -21,16 +21,18 @@ const Projects: React.FC<ProjectsProps> = ({
   const { theme } = useTheme();
 
   return (
-    <div className="w-full md:w-[40%] h-full z-10 md:border-r lg:border-x border-neutral-700 relative">
+    <div className="w-full md:w-[40%] h-full z-10 md:border-r mt-5 lg:border-x border-neutral-700 relative">
       <ScrollArea className="h-full">
         <div className="flex flex-col">
           <div
-            className={`sticky top-0 px-5 py-5 z-10 ${
+            className={`sticky top-0 px-5 pb-5 z-10 ${
               theme === "dark" ? "bg-neutral-950" : "bg-white"
             }`}
           >
             <div className="overlay absolute top-0 left-0 w-full h-full" />
-            <h2 className={`font-bold dark:text-neutral-400`}>PROJECTS</h2>
+            <h2 className={`font-bold dark:text-neutral-400 2xl:text-[1vw]`}>
+              PROJECTS
+            </h2>
           </div>
           <div className="px-5 pb-5">
             {projectsArr?.map((project, index) => {
@@ -54,12 +56,12 @@ const Projects: React.FC<ProjectsProps> = ({
                       }}
                     >
                       {index === selected && (
-                        <div className="mr-4 hidden md:block">
+                        <div className="mr-4 h-6 w-6 hidden md:block 2xl:h-[1.5vw] 2xl:w-[1.5vw]">
                           <StarIcon />
                         </div>
                       )}
                       <div
-                        className={`py-6 text-2xl font-bold text-left transition-all duration-150 ease-in-out \\
+                        className={`py-6 text-2xl 2xl:text-[1.6vw] font-bold text-left transition-all duration-150 ease-in-out \\
                         dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)] \\
                         ${
                           index === selected
@@ -74,7 +76,7 @@ const Projects: React.FC<ProjectsProps> = ({
                       </div>
                     </motion.div>
                     <div
-                      className={`border border-neutral-700 px-3 rounded-full transition-all duration-150 ease-in-out \\
+                      className={`border 2xl:text-[1vw] border-neutral-700 px-3 rounded-full transition-all duration-150 ease-in-out \\
                     dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)] \\
                     ${
                       index === selected
@@ -112,7 +114,7 @@ const Projects: React.FC<ProjectsProps> = ({
                             delay: 0.1,
                             exit: { duration: 0.2, delay: 0 },
                           }}
-                          className="text-left pb-5 text-base text-pretty"
+                          className="text-left pb-5 text-base 2xl:text-[1vw] text-pretty"
                         >
                           {project.description}
                         </motion.div>

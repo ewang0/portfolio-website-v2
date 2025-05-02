@@ -38,7 +38,7 @@ const Gallery: React.FC<GalleryProps> = ({ selectedImgUrl, skills, link }) => {
           <Badge
             key={skill}
             variant="secondary"
-            className="bg-neutral-200 text-neutral-900 dark:bg-neutral-800 dark:text-white"
+            className="bg-neutral-200 text-neutral-900 dark:bg-neutral-800 dark:text-white 2xl:text-[0.8vw]"
           >
             {skill}
           </Badge>

@@ -8,10 +8,12 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex relative z-10 justify-center items-center md:border-t border-neutral-700 mx-5 sm:justify-between py-5">
+      <div className="flex relative z-10 justify-center items-center md:border-t border-neutral-700 mx-5 sm:justify-between py-5 2xl:py-8">
         <div className="flex items-center justify-between border-neutral-700 w-full">
           <div
-            className={`text-sm ${theme === "dark" ? "text-neutral-400" : ""}`}
+            className={`text-sm 2xl:text-[1vw] ${
+              theme === "dark" ? "text-neutral-400" : ""
+            }`}
           >
             © 2025
           </div>
