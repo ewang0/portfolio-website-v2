@@ -60,13 +60,13 @@ const Projects: React.FC<ProjectsProps> = ({
                       )}
                       <div
                         className={`py-6 text-2xl font-bold text-left transition-all duration-150 ease-in-out \
-                        dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.6),_0_0_15px_rgba(255,255,255,0.4),_0_0_25px_rgba(255,255,255,0.1)] \
-                        group-hover:[text-shadow:0_0_5px_rgba(0,0,0,0.3),_0_0_15px_rgba(0,0,0,0.2),_0_0_25px_rgba(0,0,0,0.1)] \
+                        dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)] \
+                        group-hover:[text-shadow:0_0_5px_rgba(0,0,0,0.15),_0_0_15px_rgba(0,0,0,0.1),_0_0_25px_rgba(0,0,0,0.05)] \
                         ${
                           index === selected
                             ? theme === "dark"
-                              ? "[text-shadow:0_0_5px_rgba(255,255,255,0.6),_0_0_15px_rgba(255,255,255,0.4),_0_0_25px_rgba(255,255,255,0.1)]"
-                              : "[text-shadow:0_0_5px_rgba(0,0,0,0.3),_0_0_15px_rgba(0,0,0,0.2),_0_0_25px_rgba(0,0,0,0.1)]"
+                              ? "[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)]"
+                              : "[text-shadow:0_0_5px_rgba(0,0,0,0.15),_0_0_15px_rgba(0,0,0,0.1),_0_0_25px_rgba(0,0,0,0.05)]"
                             : ""
                         }
                       `}
@@ -74,7 +74,19 @@ const Projects: React.FC<ProjectsProps> = ({
                         {project.name}
                       </div>
                     </motion.div>
-                    <div className="border border-neutral-700 px-3 rounded-full">
+                    <div
+                      className={`border border-neutral-700 px-3 rounded-full transition-all duration-150 ease-in-out \
+                    dark:group-hover:[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)] \
+                    group-hover:[text-shadow:0_0_5px_rgba(0,0,0,0.15),_0_0_15px_rgba(0,0,0,0.1),_0_0_25px_rgba(0,0,0,0.05)] \
+                    ${
+                      index === selected
+                        ? theme === "dark"
+                          ? "[text-shadow:0_0_5px_rgba(255,255,255,0.5),_0_0_15px_rgba(255,255,255,0.3),_0_0_25px_rgba(255,255,255,0.1)]"
+                          : "[text-shadow:0_0_5px_rgba(0,0,0,0.15),_0_0_15px_rgba(0,0,0,0.1),_0_0_25px_rgba(0,0,0,0.05)]"
+                        : ""
+                    }
+                    `}
+                    >
                       {project.year}
                     </div>
                   </div>
