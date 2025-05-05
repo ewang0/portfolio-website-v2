@@ -21,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({
   const { theme } = useTheme();
 
   return (
-    <div className="w-full md:w-[40%] h-full z-10 md:border-r mt-5 lg:border-x border-neutral-700 relative">
+    <div className="w-full md:w-[40%] h-full z-10 md:border-r lg:border-x border-neutral-700 mt-5 relative">
       <ScrollArea className="h-full">
         <div className="flex flex-col">
           <div
@@ -139,7 +139,7 @@ const Projects: React.FC<ProjectsProps> = ({
         </div>
       </ScrollArea>
       <div
-        className={`absolute bottom-0 left-0 right-0 h-16 pointer-events-none z-20 hidden md:block ${
+        className={`absolute bottom-5 left-0 right-0 h-16 pointer-events-none z-20 hidden md:block ${
           theme === "dark"
             ? "bg-gradient-to-t from-neutral-950 to-transparent"
             : "bg-gradient-to-t from-neutral-50 to-transparent"
