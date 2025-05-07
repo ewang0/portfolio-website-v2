@@ -15,7 +15,10 @@ const Footer = () => {
               theme === "dark" ? "text-neutral-400" : ""
             }`}
           >
-            © 2025
+            <div className="flex items-center gap-2 cursor-default">
+              <div className="w-2 h-2 rounded-full bg-teal-500"></div>
+              <span className="text-teal-500">All systems normal</span>
+            </div>
           </div>
           <div className="flex items-center gap-4 text-sm">
             <ExternalLink href="https://github.com/ewang0" text="Github" />
