@@ -2,6 +2,7 @@ import ExternalLink from "./ExternalLink";
 import { ModeToggle } from "./ModeToggle";
 import "../App.css";
 import { useTheme } from "./theme/ThemeProvider";
+import { Tooltip } from "./ui/tooltip";
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -15,9 +16,14 @@ const Footer = () => {
               theme === "dark" ? "text-neutral-400" : ""
             }`}
           >
-            <div className="flex items-center gap-2 cursor-default">
+            <div className="hidden md:flex items-center gap-2 cursor-default">
               <div className="w-2 h-2 rounded-full bg-teal-500"></div>
               <span className="text-teal-500">All systems normal</span>
+            </div>
+            <div className="md:hidden">
+              <Tooltip content="All systems normal">
+                <div>&copy; 2025</div>
+              </Tooltip>
             </div>
           </div>
           <div className="flex items-center gap-4 text-sm">
