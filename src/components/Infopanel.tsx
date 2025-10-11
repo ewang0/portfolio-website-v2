@@ -14,8 +14,7 @@ const Infopanel = () => {
             ABOUT
           </h2>
           <p className="text-base text-pretty 2xl:text-[1vw]">
-            Formerly an engineer at Amazon and Lippincott. Currently doing
-            freelance work and building cool things with AI.
+            Formerly at Amazon. Currently building at SimpleClosure.
           </p>
         </div>
         <div className="py-5 mx-5 border-t border-neutral-700">
@@ -26,19 +25,19 @@ const Infopanel = () => {
             <div className="flex flex-col">
               <div className="font-medium 2xl:text-[1vw]">Amazon</div>
               <div className="dark:text-neutral-400 text-balance text-base 2xl:text-[1vw]">
-                Front End Engineer, 2022 - 2023
+                Software Engineer, 2022 - 2023
               </div>
             </div>
             <div className="flex flex-col">
               <div className="font-medium 2xl:text-[1vw]">Lippincott</div>
               <div className="dark:text-neutral-400 text-balance text-base 2xl:text-[1vw]">
-                Front End Engineer, 2023 - 2024
+                Software Engineer, 2023 - 2024
               </div>
             </div>
             <div className="flex flex-col">
-              <div className="font-medium 2xl:text-[1vw]">Freelance</div>
+              <div className="font-medium 2xl:text-[1vw]">SimpleClosure</div>
               <div className="dark:text-neutral-400 text-balance text-base 2xl:text-[1vw]">
-                Developer, 2024 - Present
+                Software Engineer, 2025 - Present
               </div>
             </div>
           </div>
