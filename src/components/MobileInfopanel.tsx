@@ -24,8 +24,7 @@ const MobileInfopanel = () => {
         </h2>
         <div className="flex flex-col text-md gap-4">
           <p className="text-pretty">
-            Formerly an engineer at Amazon and Lippincott. Currently doing
-            freelance work and building cool things with AI.
+            Formerly at Amazon. Currently building at SimpleClosure.
           </p>
         </div>
       </div>
@@ -39,19 +38,19 @@ const MobileInfopanel = () => {
           <div className="flex flex-col">
             <div className="font-medium">Amazon</div>
             <div className="dark:text-neutral-400 text-balance">
-              Front End Engineer, 2022 - 2023
+              Software Engineer, 2022 - 2023
             </div>
           </div>
           <div className="flex flex-col">
             <div className="font-medium">Lippincott</div>
             <div className="dark:text-neutral-400 text-balance">
-              Front End Engineer, 2023 - 2024
+              Software Engineer, 2023 - 2024
             </div>
           </div>
           <div className="flex flex-col">
-            <div className="font-medium">Freelance</div>
+            <div className="font-medium">SimpleClosure</div>
             <div className="dark:text-neutral-400 text-balance">
-              Developer, 2024 - Present
+              Software Engineer, 2025 - Present
             </div>
           </div>
         </div>
